@@ -15,22 +15,21 @@
 *  获取测试号信息(appid, appsecret)
 
 *  新增测试模版, 获取 template_id
-        
 
-    {% highlight python %}
+```
     exc_name: {{keyword1.DATA}}
     exc_value: {{keyword2.DATA}}
     filename: {{keyword3.DATA}}
     lineno: {{keyword4.DATA}}
     name: {{keyword5.DATA}}
     line: {{keyword6.DATA}}
-    {% endhighlight %}
+```
 
 *  获取关注者信息 openid
+
 *  config
 
-
-    {% highlight python %}
+```
     [base]
     port = 8000
     appid = 1  # 测试号信息
@@ -41,12 +40,15 @@
     id = 1  # 模版id
     send = https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=
     url = https://github.com/iakisey  # 在微信上点击模版消息时所跳转的URL
-    {% endhighlight %}
+```
 
 *  效果图
-    ![](https://github.com/iakisey/ServerMsgPush/img/效果图.png)
+
+    ![](./img/效果图.png)
+
 *  代码片段
-{% highlight python %}
+
+```
 @update_token
 def send_msg(openid, url, a, b, c, d, e, f):
     data = json.dumps({
@@ -102,5 +104,4 @@ def output_wechat():
             str(exc_value) if exc_value else None,
             *exc_tb
         ) if exc_type_msg or exc_value or exc_tb else None
-{% endhighlight %}
-
+```
