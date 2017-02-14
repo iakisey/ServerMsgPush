@@ -1,0 +1,11 @@
+[base]
+port = 8000
+appid = 1
+appsecret = 2
+token_url = https://api.weixin.qq.com/cgi-bin/token?
+maintainer = ['a', 'b']
+
+[template]
+id = 3
+send = https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=
+url = https://github.com/iakisey
